@@ -40,6 +40,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        currentYear: new Date().getFullYear(),
+        pageTitle: 'Projects Page'
+    });
+});
+
 app.listen(port, () => {
     console.log('HTTP server started!');
 });
